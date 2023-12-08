@@ -26,3 +26,6 @@ export const useMediaScreen = () => {
 
   return [isMediaScreen, setMediaScreen];
 };
+
+// Usage -> import { useMediaScreen } from "./MediaScreen";
+// const [isMediaScreen, setMediaScreen] = useMediaScreen();
