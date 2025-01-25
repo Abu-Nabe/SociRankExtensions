@@ -6,10 +6,12 @@ function unidealApproach() {
     setMaterialSelected(materialsDataArray[0]);
   }
   if (modelsDataArray.length > 0) {
-    setModel(modelsDataArray[0]);
+    setModelSelected(modelsDataArray[0]);
   }
-  
-  setOthersArray(othersDataArray[0]); // Assuming othersDataArray[0] always exists
+
+  if (othersDataArray.length > 0) {
+     setOtherSelected(othersDataArray[0]); 
+  }
 }
 
 function idealApproach() {
@@ -17,7 +19,7 @@ function idealApproach() {
   
   setColorSelected(getFirstOrDefault(colorsDataArray, null));
   setMaterialSelected(getFirstOrDefault(materialsDataArray, null));
-  setModelsArray(getFirstOrDefault(modelsDataArray, []));
-  setOthersArray(getFirstOrDefault(othersDataArray, []));
+  setModelSelected(getFirstOrDefault(modelsDataArray, []));
+  setOtherSelected(getFirstOrDefault(othersDataArray, []));
 }
 
