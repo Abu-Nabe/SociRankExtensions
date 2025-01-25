@@ -1,0 +1,23 @@
+function unidealApproach() {
+  if (colorsDataArray.length > 0) {
+    setColorSelected(colorsDataArray[0]);
+  }
+  if (materialsDataArray.length > 0) {
+    setMaterialSelected(materialsDataArray[0]);
+  }
+  if (modelsDataArray.length > 0) {
+    setModel(modelsDataArray[0]);
+  }
+  
+  setOthersArray(othersDataArray[0]); // Assuming othersDataArray[0] always exists
+}
+
+function idealApproach() {
+  const getFirstOrDefault = (array, defaultValue) => (array.length > 0 ? array[0] : defaultValue);
+  
+  setColorSelected(getFirstOrDefault(colorsDataArray, null));
+  setMaterialSelected(getFirstOrDefault(materialsDataArray, null));
+  setModelsArray(getFirstOrDefault(modelsDataArray, []));
+  setOthersArray(getFirstOrDefault(othersDataArray, []));
+}
+
